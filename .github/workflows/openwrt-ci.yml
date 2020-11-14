@@ -51,7 +51,107 @@ jobs:
           ./scripts/feeds install -a
 
       - name: Generate configuration file
-        run: make defconfig
+        run: |
+          rm -f ./.config*
+          touch ./.config
+
+          #
+          # ========================固件定制部分========================
+          # 
+          cat >> .config <<EOF
+          CONFIG_TARGET_x86=y
+          CONFIG_TARGET_x86_64=y
+          CONFIG_TARGET_x86_64_DEVICE_generic=y
+          CONFIG_KSMBD_SMB_INSECURE_SERVER=y
+          CONFIG_LIBCURL_COOKIES=y
+          CONFIG_LIBCURL_FILE=y
+          CONFIG_LIBCURL_FTP=y
+          CONFIG_LIBCURL_HTTP=y
+          CONFIG_LIBCURL_MBEDTLS=y
+          CONFIG_LIBCURL_NO_SMB="!"
+          CONFIG_LIBCURL_PROXY=y
+          CONFIG_OPENVPN_openssl_ENABLE_DEF_AUTH=y
+          CONFIG_OPENVPN_openssl_ENABLE_FRAGMENT=y
+          CONFIG_OPENVPN_openssl_ENABLE_LZ4=y
+          CONFIG_OPENVPN_openssl_ENABLE_LZO=y
+          CONFIG_OPENVPN_openssl_ENABLE_MULTIHOME=y
+          CONFIG_OPENVPN_openssl_ENABLE_PF=y
+          CONFIG_OPENVPN_openssl_ENABLE_PORT_SHARE=y
+          CONFIG_OPENVPN_openssl_ENABLE_SERVER=y
+          CONFIG_OPENVPN_openssl_ENABLE_SMALL=y
+          CONFIG_PACKAGE_bash=y
+          CONFIG_PACKAGE_ca-bundle=y
+          CONFIG_PACKAGE_coreutils-nohup=y
+          CONFIG_PACKAGE_curl=y
+          CONFIG_PACKAGE_fuse-utils=y
+          CONFIG_PACKAGE_iptables-mod-extra=y
+          CONFIG_PACKAGE_iputils-arping=y
+          CONFIG_PACKAGE_kcptun-client=y
+          CONFIG_PACKAGE_kmod-crypto-ccm=y
+          CONFIG_PACKAGE_kmod-crypto-cmac=y
+          CONFIG_PACKAGE_kmod-crypto-ctr=y
+          CONFIG_PACKAGE_kmod-crypto-gcm=y
+          CONFIG_PACKAGE_kmod-crypto-gf128=y
+          CONFIG_PACKAGE_kmod-crypto-ghash=y
+          CONFIG_PACKAGE_kmod-crypto-md4=y
+          CONFIG_PACKAGE_kmod-crypto-rng=y
+          CONFIG_PACKAGE_kmod-crypto-seqiv=y
+          CONFIG_PACKAGE_kmod-crypto-sha256=y
+          CONFIG_PACKAGE_kmod-crypto-sha512=y
+          CONFIG_PACKAGE_kmod-fs-cifs=y
+          CONFIG_PACKAGE_kmod-fs-ksmbd=y
+          CONFIG_PACKAGE_kmod-fuse=y
+          CONFIG_PACKAGE_kmod-ipt-extra=y
+          CONFIG_PACKAGE_ksmbd-server=y
+          CONFIG_PACKAGE_libcap=y
+          CONFIG_PACKAGE_libcap-bin=y
+          CONFIG_PACKAGE_libcap-bin-capsh-shell="/bin/sh"
+          CONFIG_PACKAGE_libcurl=y
+          CONFIG_PACKAGE_libfuse=y
+          CONFIG_PACKAGE_liblzo=y
+          CONFIG_PACKAGE_libnl-core=y
+          CONFIG_PACKAGE_libnl-genl=y
+          CONFIG_PACKAGE_libnss=y
+          CONFIG_PACKAGE_libsqlite3=y
+          CONFIG_PACKAGE_luci-app-adguardhome=y
+          CONFIG_PACKAGE_luci-app-cifs-mount=y
+          CONFIG_PACKAGE_luci-app-cifsd=y
+          CONFIG_PACKAGE_luci-app-openclash=y
+          CONFIG_PACKAGE_luci-app-openvpn=y
+          CONFIG_PACKAGE_luci-app-openvpn-server=y
+          CONFIG_PACKAGE_luci-app-rclone=y
+          CONFIG_PACKAGE_luci-app-serverchan=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
+          # CONFIG_PACKAGE_luci-app-xlnetacc is not set
+          CONFIG_PACKAGE_luci-i18n-cifs-mount-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-cifsd-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-openvpn-server-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-openvpn-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-rclone-zh-cn=y
+          CONFIG_PACKAGE_luci-theme-darkmatter=y
+          CONFIG_PACKAGE_luci-theme-rosy=y
+          CONFIG_PACKAGE_naiveproxy=y
+          CONFIG_PACKAGE_nspr=y
+          CONFIG_PACKAGE_openvpn-easy-rsa=y
+          CONFIG_PACKAGE_openvpn-openssl=y
+          CONFIG_PACKAGE_rclone=y
+          CONFIG_PACKAGE_rclone-ng=y
+          CONFIG_PACKAGE_rclone-webui-react=y
+          CONFIG_SQLITE3_DYNAMIC_EXTENSIONS=y
+          CONFIG_SQLITE3_FTS3=y
+          CONFIG_SQLITE3_FTS4=y
+          CONFIG_SQLITE3_FTS5=y
+          CONFIG_SQLITE3_JSON1=y
+          CONFIG_SQLITE3_RTREE=y
+          EOF
+          # 
+          # ========================固件定制部分结束========================
+          # 
+
+          sed -i 's/^[ \t]*//g' ./.config
+          make defconfig
+
 
       - name: Make download
         run: |
