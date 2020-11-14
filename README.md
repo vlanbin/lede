@@ -6,7 +6,6 @@
 
 
 #### 当前所做的修改
-- ~~移除原项目预编译的v2ray，采用直接编译官方源码的方式 ([KFERMercer/openwrt-v2ray](https://github.com/KFERMercer/openwrt-v2ray))~~
 
 - 添加OpenClash插件 ([vernesong/OpenClash](https://github.com/vernesong/OpenClash))
 
