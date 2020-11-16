@@ -94,6 +94,7 @@ jobs:
           CONFIG_PACKAGE_coreutils-nohup=y
           CONFIG_PACKAGE_curl=y
           CONFIG_PACKAGE_dbus=y
+          CONFIG_PACKAGE_dnsforwarder=y
           CONFIG_PACKAGE_fdk-aac=y
           CONFIG_PACKAGE_forked-daapd=y
           CONFIG_PACKAGE_frpc=y
@@ -171,6 +172,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-airplay2=y
           CONFIG_PACKAGE_luci-app-cifs-mount=y
           CONFIG_PACKAGE_luci-app-cifsd=y
+          CONFIG_PACKAGE_luci-app-dnsforwarder=y
           CONFIG_PACKAGE_luci-app-flowoffload=y
           CONFIG_PACKAGE_luci-app-frpc=y
           CONFIG_PACKAGE_luci-app-frps=y
@@ -188,6 +190,7 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-airplay2-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-cifs-mount-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-cifsd-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-dnsforwarder-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-flowoffload-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-frpc-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-frps-zh-cn=y
