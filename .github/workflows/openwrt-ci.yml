@@ -98,6 +98,7 @@ jobs:
           CONFIG_PACKAGE_forked-daapd=y
           CONFIG_PACKAGE_frpc=y
           CONFIG_PACKAGE_frps=y
+          CONFIG_PACKAGE_glib2=y
           CONFIG_PACKAGE_haproxy=y
           CONFIG_PACKAGE_iptables-mod-extra=y
           CONFIG_PACKAGE_iputils-arping=y
@@ -133,6 +134,7 @@ jobs:
           CONFIG_PACKAGE_ksmbd-server=y
           CONFIG_PACKAGE_lame-lib=y
           CONFIG_PACKAGE_libantlr3c=y
+          CONFIG_PACKAGE_libattr=y
           CONFIG_PACKAGE_libavahi-client=y
           CONFIG_PACKAGE_libavahi-dbus-support=y
           CONFIG_PACKAGE_libbz2=y
@@ -145,6 +147,7 @@ jobs:
           CONFIG_PACKAGE_libdbus=y
           CONFIG_PACKAGE_libedit=y
           CONFIG_PACKAGE_libexpat=y
+          CONFIG_PACKAGE_libffi=y
           CONFIG_PACKAGE_libffmpeg-full=y
           CONFIG_PACKAGE_libgcrypt=y
           CONFIG_PACKAGE_libgdbm=y
@@ -164,6 +167,7 @@ jobs:
           CONFIG_PACKAGE_libprotobuf-c=y
           CONFIG_PACKAGE_libsoxr=y
           CONFIG_PACKAGE_libsqlite3=y
+          CONFIG_PACKAGE_libtirpc=y
           CONFIG_PACKAGE_libunistring=y
           CONFIG_PACKAGE_libwebsockets-full=y
           CONFIG_PACKAGE_libxml2=y
@@ -202,6 +206,7 @@ jobs:
           CONFIG_PACKAGE_mxml=y
           CONFIG_PACKAGE_naiveproxy=y
           CONFIG_PACKAGE_nspr=y
+          CONFIG_PACKAGE_open-vm-tools=y
           CONFIG_PACKAGE_openvpn-easy-rsa=y
           CONFIG_PACKAGE_openvpn-openssl=y
           CONFIG_PACKAGE_shairport-sync-openssl=y
