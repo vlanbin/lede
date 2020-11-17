@@ -180,6 +180,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-openvpn=y
           CONFIG_PACKAGE_luci-app-openvpn-server=y
           CONFIG_PACKAGE_luci-app-serverchan=y
+          # CONFIG_PACKAGE_luci-app-sfe is not set
           CONFIG_PACKAGE_luci-app-softethervpn=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
@@ -218,7 +219,8 @@ jobs:
           CONFIG_SQLITE3_RTREE=y
           # CONFIG_VMDK_IMAGES is not set
           CONFIG_PACKAGE_grub2-efi=y
-
+          CONFIG_PACKAGE_kmod-fast-classifier=y
+          CONFIG_PACKAGE_kmod-shortcut-fe=y
           EOF
           # 
           # ========================固件定制部分结束========================
