@@ -173,9 +173,8 @@ jobs:
           CONFIG_PACKAGE_libxml2=y
           CONFIG_PACKAGE_luci-app-adguardhome=y
           CONFIG_PACKAGE_luci-app-airplay2=y
-          CONFIG_PACKAGE_luci-app-cifsd=y
+          CONFIG_PACKAGE_luci-app-cifs-mount=y
           CONFIG_PACKAGE_luci-app-dnsforwarder=y
-          CONFIG_PACKAGE_luci-app-flowoffload=y
           CONFIG_PACKAGE_luci-app-frpc=y
           CONFIG_PACKAGE_luci-app-frps=y
           CONFIG_PACKAGE_luci-app-haproxy-tcp=y
@@ -184,16 +183,14 @@ jobs:
           CONFIG_PACKAGE_luci-app-openvpn=y
           CONFIG_PACKAGE_luci-app-openvpn-server=y
           CONFIG_PACKAGE_luci-app-serverchan=y
-          # CONFIG_PACKAGE_luci-app-sfe is not set
           CONFIG_PACKAGE_luci-app-softethervpn=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
           CONFIG_PACKAGE_luci-app-v2ray-server=y
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
           CONFIG_PACKAGE_luci-i18n-airplay2-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-cifsd-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-cifs-mount-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-dnsforwarder-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-flowoffload-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-frpc-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-frps-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-haproxy-tcp-zh-cn=y
@@ -224,8 +221,6 @@ jobs:
           CONFIG_SQLITE3_RTREE=y
           # CONFIG_VMDK_IMAGES is not set
           CONFIG_PACKAGE_grub2-efi=y
-          CONFIG_PACKAGE_kmod-fast-classifier=y
-          CONFIG_PACKAGE_kmod-shortcut-fe=y
           EOF
           # 
           # ========================固件定制部分结束========================
