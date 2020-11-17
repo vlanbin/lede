@@ -66,6 +66,7 @@ jobs:
           CONFIG_GNUTLS_HEARTBEAT=y
           CONFIG_GNUTLS_OCSP=y
           CONFIG_GNUTLS_PSK=y
+          # CONFIG_GRUB_EFI_IMAGES is not set
           CONFIG_KSMBD_SMB_INSECURE_SERVER=y
           CONFIG_LIBCURL_COOKIES=y
           CONFIG_LIBCURL_FILE=y
@@ -168,7 +169,6 @@ jobs:
           CONFIG_PACKAGE_libxml2=y
           CONFIG_PACKAGE_luci-app-adguardhome=y
           CONFIG_PACKAGE_luci-app-airplay2=y
-          CONFIG_PACKAGE_luci-app-cifs-mount=y
           CONFIG_PACKAGE_luci-app-cifsd=y
           CONFIG_PACKAGE_luci-app-dnsforwarder=y
           CONFIG_PACKAGE_luci-app-flowoffload=y
@@ -186,7 +186,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-v2ray-server=y
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
           CONFIG_PACKAGE_luci-i18n-airplay2-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-cifs-mount-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-cifsd-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-dnsforwarder-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-flowoffload-zh-cn=y
@@ -217,6 +216,9 @@ jobs:
           CONFIG_SQLITE3_JSON1=y
           CONFIG_SQLITE3_LIBEDIT=y
           CONFIG_SQLITE3_RTREE=y
+          # CONFIG_VMDK_IMAGES is not set
+          CONFIG_PACKAGE_grub2-efi=y
+
           EOF
           # 
           # ========================固件定制部分结束========================
